@@ -11,15 +11,11 @@
    :target: https://coveralls.io/github/crazy-canux/pytestautomation?branch=master
 
 
-===================
+================
 pytestautomation
-===================
+================
 
-pytestautomation is pure python code.
-
-It's a API packge for monitoring plugins, like Nagios, Icinga, Naemon, Shinken, Centreon, Opsview and Sensu.
-
-`[awesome-monitoring] <https://github.com/crazy-canux/awesome-monitoring>`_.
+Test automation based on robot framework and selenium
 
 --------------
 How to install
@@ -27,7 +23,7 @@ How to install
 
 Use pip to install::
 
-    pip install pytestautomation
+    $ pip install pytestautomation
 
 ----------
 How to use
@@ -35,71 +31,7 @@ How to use
 
 Just import what protocol you need::
 
-    from pytestautomation.ftp_ftplib import Ftp
-    from pytestautomation.http_requests import Http
-    from pytestautomation.mssql_pymssql import Mssql
-    from pytestautomation.mysql_pymysql import Mysql
-    from pytestautomation.ssh_paramiko import Ssh
-    from pytestautomation.winrm_pywinrm import WinRM
-    from pytestautomation.wmi_sh import Wmi
-    from pytestautomation.wmi_subprocess import Wmi
-
-Then write your own function monitoring class::
-
-    class YourClass(Ftp/Mssql/Ssh/WinRM/Wmi/Http/Snmp/...):
-        def __init__(self):
-            super(YourClass, self).__init__()
-            self.logger.debug("Init YourClass.")
-
-        def define_sub_options(self):
-            super(YourClass, self).define_sub_options()
-            self.your_parser = self.subparsers.add_parser(...)
-            self.your_parser.add_argument(...)
-            ...
-
-        def your_handle(self):
-            """Put your function monitoring code here."""
-            # Default status is ok.
-            status = self.ok
-
-            # Call the API and get the monitoring data.
-            # Read the document or check the API on python/ipython Interactive console.
-            # help(Ftp/...)
-            # dir(Ftp/...)
-            ...
-
-            #  Compare with the warning and critical value and change the status.
-            ...
-
-            self.shortoutput = "..."
-            self.longoutput.append(...)
-            self.perfdata.append(...)
-
-            self.logger.debug("Return status and output.")
-            status(self.output())
-
-If you put more than one function monitoring class in one file(Not recommend)::
-
-    class Register(YourClass1, YourClass2, ...):
-        def __init__(self):
-            super(Register, self).__init__()
-
-Last step::
-
-    def main():
-        # For multiple inherit
-        # plugin = Register()
-        plugin = YourClass()
-        arguments = sys.argv[1:]
-        if 'your' in arguments:
-            plugin.your_handle()
-        elif 'your2' in arguments:
-            plugin.your2_handle()
-        else:
-            plugin.unknown("Unknown actions.")
-
-    if __name__ == "__main__":
-        main()
+    $ import pytestautomation
 
 --------------
 How to extends
@@ -113,12 +45,9 @@ Also you can pull request for your code.
 TODO
 -----
 
-* Distribute 1.3.0 to pypi.
-* Write unit test in tests/
-* Compatible with Python3(2.0.0)
-* vSphere monitoring(1.6.0)
-* LDAP monitoring(1.5.0)
-* SNMP monitoring(1.4.0)
+* 0.0.2 read information from /etc/*.yaml file.
+* 0.0.3 basic wrapper for selenum3 and requests and paromiko.
+* 0.0.4 test basic function as a robot library.
 
 =============
 Documentation
