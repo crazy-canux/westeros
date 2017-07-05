@@ -7,7 +7,7 @@ Copyright (C) 2016 Canux CHENG.
 All rights reserved.
 Name: setup.py
 Author: Canux CHENG canuxcheng@gmail.com
-Version: V1.0.0.0
+Version: V0.0.1
 Time: Fri 05 Aug 2016 09:59:29 AM CST
 
 Description:
@@ -22,8 +22,8 @@ import pytestautomation
 NAME = 'pytestautomation'
 VERSION = pytestautomation.__version__
 URL = 'https://github.com/crazy-canux/pytestautomation'
-DESCRIPTION = 'Common interface of tons protocals, used for monitoring tools, like nagios/icinga...'
-KEYWORDS = 'monitoring nagios icinga plugins'
+DESCRIPTION = 'Test automation framework based on robot framework and selenium.'
+KEYWORDS = 'test automation robot framework selenium'
 
 
 def read(readme):
@@ -57,13 +57,14 @@ setup(
     include_package_data=True,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
-        "Environment :: Plugins",
+        "Environment :: Other Environment",
+        "Framework :: Robot Framework",
         "Intended Audience :: Developers",
-        "Natural Language :: English",
         "License :: OSI Approved :: GNU General Public License (GPL)",
+        "Natural Language :: English",
         "Operating System :: POSIX",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
-        "Topic :: System :: Monitoring"
+        "Topic :: Software Development :: Quality Assurance",
     ],
 )

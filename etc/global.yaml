@@ -1,0 +1,9 @@
+Google:
+    url        : https://google.com
+    username   : canux
+    password   : password
+
+##########
+# Optional
+browser_name   : Firefox
+history_dir    : C:\\Users\\Chengc5\\Desktop\\Src\\history
