@@ -31,7 +31,7 @@ How to use
 
 Just import what protocol you need::
 
-    $ import westeros
+    import westeros
 
 --------------
 How to extends
@@ -46,14 +46,9 @@ TODO
 -----
 
 * 0.0.2 read information from /etc/*.yaml file.
-* 0.0.3 basic wrapper for selenum3 and requests and paromiko.
-* 0.0.4 test basic function as a robot library.
-
-=============
-Documentation
-=============
-
-`[Documentation] <http://westeros.readthedocs.io/en/latest/>`_
+* 0.0.3 implement the basic robot function include listener.
+* 0.0.4 basic wrapper for selenum and requests and paromiko.
+* 0.0.5 test basic function as a robot library.
 
 ============
 Contribution
