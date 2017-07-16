@@ -11,11 +11,14 @@
    :target: https://coveralls.io/github/crazy-canux/westeros?branch=master
 
 
-================
+========
 westeros
-================
+========
 
 Test automation based on robot framework and selenium
+
+.. figure:: https://github.com/crazy-canux/westeros/blob/master/data/images/wes.jpg
+   :alt: pic1
 
 --------------
 How to install
