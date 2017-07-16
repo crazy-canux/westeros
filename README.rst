@@ -1,18 +1,18 @@
-.. image:: https://img.shields.io/pypi/v/pytestautomation.svg
-   :target: https://pypi.python.org/pypi/pytestautomation/
+.. image:: https://img.shields.io/pypi/v/westeros.svg
+   :target: https://pypi.python.org/pypi/westeros/
 
-.. image:: https://img.shields.io/pypi/dm/pytestautomation.svg
-   :target: https://pypi.python.org/pypi/pytestautomation/
+.. image:: https://img.shields.io/pypi/dm/westeros.svg
+   :target: https://pypi.python.org/pypi/westeros/
 
-.. image:: https://travis-ci.org/crazy-canux/pytestautomation.svg?branch=master
-   :target: https://travis-ci.org/crazy-canux/pytestautomation
+.. image:: https://travis-ci.org/crazy-canux/westeros.svg?branch=master
+   :target: https://travis-ci.org/crazy-canux/westeros
 
-.. image:: https://coveralls.io/repos/github/crazy-canux/pytestautomation/badge.svg?branch=master
-   :target: https://coveralls.io/github/crazy-canux/pytestautomation?branch=master
+.. image:: https://coveralls.io/repos/github/crazy-canux/westeros/badge.svg?branch=master
+   :target: https://coveralls.io/github/crazy-canux/westeros?branch=master
 
 
 ================
-pytestautomation
+westeros
 ================
 
 Test automation based on robot framework and selenium
@@ -23,7 +23,7 @@ How to install
 
 Use pip to install::
 
-    $ pip install pytestautomation
+    $ pip install westeros
 
 ----------
 How to use
@@ -31,7 +31,7 @@ How to use
 
 Just import what protocol you need::
 
-    $ import pytestautomation
+    $ import westeros
 
 --------------
 How to extends
@@ -53,22 +53,22 @@ TODO
 Documentation
 =============
 
-`[Documentation] <http://pytestautomation.readthedocs.io/en/latest/>`_
+`[Documentation] <http://westeros.readthedocs.io/en/latest/>`_
 
 ============
 Contribution
 ============
 
-`[Contribution] <https://github.com/crazy-canux/pytestautomation/blob/master/CONTRIBUTING.rst>`_
+`[Contribution] <https://github.com/crazy-canux/westeros/blob/master/CONTRIBUTING.rst>`_
 
 =======
 Authors
 =======
 
-`[Authors] <https://github.com/crazy-canux/pytestautomation/blob/master/AUTHORS.rst>`_
+`[Authors] <https://github.com/crazy-canux/westeros/blob/master/AUTHORS.rst>`_
 
 =======
 License
 =======
 
-`[License] <https://github.com/crazy-canux/pytestautomation/blob/master/LICENSE>`_
+`[License] <https://github.com/crazy-canux/westeros/blob/master/LICENSE>`_

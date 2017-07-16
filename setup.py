@@ -3,7 +3,7 @@
 """
 Setup file used for install this package.
 
-Copyright (C) 2016 Canux CHENG.
+Copyright (C) 2017 Canux CHENG.
 All rights reserved.
 Name: setup.py
 Author: Canux CHENG canuxcheng@gmail.com
@@ -17,11 +17,11 @@ import os
 
 from setuptools import setup, find_packages
 
-import pytestautomation
+import westeros
 
-NAME = 'pytestautomation'
-VERSION = pytestautomation.__version__
-URL = 'https://github.com/crazy-canux/pytestautomation'
+NAME = 'westeros'
+VERSION = westeros.__version__
+URL = 'https://github.com/crazy-canux/westeros'
 DESCRIPTION = 'Test automation framework based on robot framework and selenium.'
 KEYWORDS = 'test automation robot framework selenium'
 

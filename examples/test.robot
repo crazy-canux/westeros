@@ -1,8 +1,8 @@
 *** Settings ***
-Library    pytestautomation.keywords.aggregated_workflow.AggregatedWorkflow
+Library    westeros.keywords.aggregated_workflow.AggregatedWorkflow
 
 *** Variables ***
-{conf_dir}    ~/pytestautomation/etc/
+{conf_dir}    ~/westeros/etc/
 {global_file}    {conf_dir}/global.yaml
 
 *** Test Cases ***
@@ -14,7 +14,6 @@ Test Setup Case
     [Teardown]    Clean Up Environment
     Comment    User Launches Browser
     User Launches Browser
-
 
 
 
