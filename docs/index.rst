@@ -15,13 +15,13 @@ Install
 
 Use pip::
 
-    $pip install westeros
+    $ pip install westeros
 
 Use source code::
 
-    $git clone https://github.com/crazy-canux/westeros.git
-    $cd westeros
-    $python setup.py install
+    $ git clone https://github.com/crazy-canux/westeros.git
+    $ cd westeros
+    $ python setup.py install
 
 ===========
 Quick Start
