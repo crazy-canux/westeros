@@ -17,13 +17,14 @@ DESCRIPTION:
 import os
 import tempfile
 
+from westeros import __version__
 from westeros.utils.listener import Listener
 from westeros.utils.yamldata.workflowcontext import WorkflowContext
 
 
 class Workflow(object):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    ROBOT_LIBRARY_VERSION = '0.0.1'
+    ROBOT_LIBRARY_VERSION = __version__
     ROBOT_LIBRARY_DOC_FORMAT = 'ROBOT'
 
     def __init__(
