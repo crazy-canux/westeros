@@ -1,20 +1,17 @@
 *** Settings ***
-Library    westeros.keywords.aggregated_workflow.AggregatedWorkflow
+Library    westeros.keywords.workflow.Workflow
 
 *** Variables ***
-{conf_dir}    ~/westeros/etc/
+{conf_dir}       ../etc
 {global_file}    {conf_dir}/global.yaml
 
 *** Test Cases ***
-
-Test Setup Case
-    [Documentation]    Test if browser and dirver and python packages working well.
-    [tags]    SETUP
+[Test-1] Test basic functions.
+    [Documentation]    Test this package.
+    [Tags]    SETUP
     [Setup]    Load Configurations    ${global_file}
-    [Teardown]    Clean Up Environment
-    Comment    User Launches Browser
-    User Launches Browser
-
-
-
-
+    [Teardown]    Tear Down
+    Comment    User Open Browser
+    User Open Browser
+    User Close Browser
+    Clean Up Environment
