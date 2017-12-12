@@ -15,43 +15,44 @@
 westeros
 ========
 
-Test automation based on robot framework and selenium
+Test automation based on robot framework and unittest.
 
 .. figure:: https://github.com/crazy-canux/westeros/blob/master/data/images/wes.jpg
    :alt: pic1
 
---------------
-How to install
---------------
+development::
 
-Use pip to install::
+    pycharm
+    intellibot
+    ideavim
 
-    $ pip install westeros
+firefox for ui::
 
-----------
-How to use
-----------
+    geckodriver 0.19.0
+    firefox 55.0
+    selenium 3.5
 
-Just import what protocol you need::
+chrome for ui::
 
-    import westeros
+    chromedriver 2.33
+    chrome 60-62
+    selenium 3.5
 
---------------
-How to extends
---------------
+-----
+usage
+-----
 
-Check the TODO list, you can give test examples or documents.
+Download source code and extend::
 
-Also you can pull request for your code.
+    $ git clone https://github.com/crazy-canux/westeros.git
+
+Install from source code::
+
+    $ python setup.py install
 
 ----
 TODO
 ----
-
-* 0.0.2 read information from /etc/*.yaml file.
-* 0.0.3 implement the basic robot function include listener.
-* 0.0.4 basic wrapper for selenum and requests and paromiko.
-* 0.0.5 test basic function as a robot library.
 
 ============
 Contribution

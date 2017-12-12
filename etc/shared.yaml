@@ -1,0 +1,5 @@
+##############################################################################
+# Shared context between keywords
+shared:
+    browser:
+        id:

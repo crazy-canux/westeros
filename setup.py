@@ -22,8 +22,8 @@ import westeros
 NAME = 'westeros'
 VERSION = westeros.__version__
 URL = 'https://github.com/crazy-canux/westeros'
-DESCRIPTION = 'Test automation framework based on robot framework and selenium.'
-KEYWORDS = 'test automation robot framework selenium'
+DESCRIPTION = 'Test automation framework based on robot framework.'
+KEYWORDS = 'test automation robot framework'
 
 
 def read(readme):
@@ -55,6 +55,16 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
+    scripts=['bin/westeros'],
+    data_files=[
+        ('/etc/westeros', [
+            'etc/global.yaml',
+            'etc/shared.yaml'
+        ]),
+        ('/etc/westeros/robot', [
+            'examples/westeros.robot'
+        ])
+    ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Other Environment",

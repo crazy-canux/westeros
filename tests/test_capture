@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from super_devops.robotframework.rf_wrapper import BaseRF
+from westeros import __version__
+
+
+if __name__ == '__main__':
+    rf = BaseRF(
+        robot_files='../examples',
+        outputdir='/var/log/westeros',
+        prog='Westeros',
+        description='Westeros command line interface.',
+        epilog='Westeros command line options.',
+        version=__version__
+    )
+    rf.parse_options()
+

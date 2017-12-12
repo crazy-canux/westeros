@@ -7,29 +7,17 @@
 westeros
 ========
 
-Test Automation build with robot framework and selenium
+Test Automation build with robot framework and unittest.
 
-=======
-Install
-=======
-
-Use pip::
-
-    $ pip install westeros
+=====
+Usage
+=====
 
 Use source code::
 
     $ git clone https://github.com/crazy-canux/westeros.git
     $ cd westeros
     $ python setup.py install
-
-===========
-Quick Start
-===========
-
-Import this library::
-
-    import westeros
 
 ==============
 The User Guide
@@ -38,8 +26,10 @@ The User Guide
 .. toctree::
    :maxdepth: 2
 
+   unittest
    robotframework
    selenium
+   sqlalchemy
    requests
    paramiko
    yaml
