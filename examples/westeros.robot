@@ -2,7 +2,7 @@
 Library    westeros.keywords.workflows.Workflows
 
 *** Variables ***
-${conf_path}    /etc
+${conf_path}    /etc/westeros
 # For debug
 #${conf_path}    ../etc
 

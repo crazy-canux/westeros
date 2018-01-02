@@ -1,4 +1,3 @@
-from .submit.auc import SubmitAUC
 
 
 class RestManager(object):

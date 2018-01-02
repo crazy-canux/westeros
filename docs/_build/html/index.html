@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>westeros &mdash; westeros 1.0.0 documentation</title>
+    <title>westeros &mdash; westeros 1.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0.0',
+        VERSION:     '1.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="westeros 1.0.0 documentation" href="#" />
+    <link rel="top" title="westeros 1.1.0 documentation" href="#" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -52,6 +52,32 @@ $ python setup.py install
 </div>
 <div class="section" id="the-user-guide">
 <h1>The User Guide<a class="headerlink" href="#the-user-guide" title="Permalink to this headline">¶</a></h1>
+<p>Create the AUC for the business:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd westeros/auc
+$ mkdir &lt;auc-category-name&gt;
+$ cd &lt;auc-category-name&gt;
+$ vim manager.py
+$ mkdir &lt;auc-sub-name&gt;
+$ cd &lt;auc-sub-name&gt;
+$ vim auc.py
+</pre></div>
+</div>
+<p>Create the KEYWORDS for workflows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd westeros/keywords
+$ vim &lt;keywords_category&gt;_workflow.py
+</pre></div>
+</div>
+<p>Create workflow in robot file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd westeros/examples
+$ vim westeros.robot
+</pre></div>
+</div>
+<p>Modify configuration for workflow:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd westeros/etc
+$ vim global.yaml
+$ vim shared.yaml
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>

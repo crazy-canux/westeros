@@ -48,7 +48,11 @@ Download source code and extend::
 
 Install from source code::
 
-    $ python setup.py install
+    $ sudo python setup.py install
+
+Command line is the only user interface::
+
+    $ westeros --help
 
 ----
 TODO

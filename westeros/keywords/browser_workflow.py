@@ -1,10 +1,9 @@
 import os
 
-from .base_workflow import BaseWorkflow
-
 from westeros.auc.browser.manager import BrowserManager
 from westeros.auc.authentication.manager import AuthManager
 from westeros.auc.dashboard.manager import DashboardManager
+from .base_workflow import BaseWorkflow
 
 
 class BrowserWorkflow(BaseWorkflow):

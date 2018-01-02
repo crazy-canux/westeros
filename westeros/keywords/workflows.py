@@ -1,13 +1,11 @@
 from robot.api import logger
+from super_devops.robotframework.listener import Listener
 
+from westeros import __version__
 from .database_workflow import DatabaseWorkflow
 from .rabbitmq_workflow import RabbitWorkflow
 from .browser_workflow import BrowserWorkflow
 from .rest_workflow import RestWorkflow
-
-from super_devops.robotframework.listener import Listener
-
-from westeros import __version__
 
 
 class Workflows(DatabaseWorkflow,

@@ -1,7 +1,9 @@
 from robot.api import logger
 
-from super_devops.unittest.unittest_wrapper import BaseUnitTest
+from super_devops.robotframework.unittest_wrapper import BaseUnitTest
 from super_devops.ssh.paramiko_wrapper import BaseParamiko
+
+from westeros.utils
 
 
 class CleanDiskAUC(BaseUnitTest):
@@ -23,11 +25,11 @@ class CleanDiskAUC(BaseUnitTest):
         with BaseParamiko(
                 self._host, self._username, self._password,
         ) as ssh:
-            self._output = ssh.exec_command(
+            self._output, self._error = ssh.exec_command(
                 cmd, get_pty=True, sudo_pw=self._sudo_pw
             )
             logger.debug("output: {}".format(self._output))
-        # TODO: validate result.
+            logger.debug("error: {}".format(self._error))
 
     def _validate_input(self):
         assert self._host is not None, "Host is required."

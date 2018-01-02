@@ -2,7 +2,6 @@ import os
 import tempfile
 
 from robot.api import logger
-
 from super_devops.yaml.yaml_wrapper import BaseYaml
 
 

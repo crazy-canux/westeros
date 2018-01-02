@@ -1,4 +1,4 @@
-from super_devops.unittest.unittest_wrapper import BaseUnitTest
+from super_devops.robotframework.unittest_wrapper import BaseUnitTest
 from super_devops.selenium.selenium_wrapper import BaseSelenium
 
 

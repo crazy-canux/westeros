@@ -1,6 +1,5 @@
-from .base_workflow import BaseWorkflow
-
 from westeros.auc.infrastructure.manager import InfraManager
+from .base_workflow import BaseWorkflow
 
 
 class RabbitWorkflow(BaseWorkflow):

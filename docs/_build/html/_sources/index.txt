@@ -23,16 +23,37 @@ Use source code::
 The User Guide
 ==============
 
+Create the AUC for the business::
+
+    $ cd westeros/auc
+    $ mkdir <auc-category-name>
+    $ cd <auc-category-name>
+    $ vim manager.py
+    $ mkdir <auc-sub-name>
+    $ cd <auc-sub-name>
+    $ vim auc.py
+
+Create the KEYWORDS for workflows::
+
+    $ cd westeros/keywords
+    $ vim <keywords_category>_workflow.py
+
+Create workflow in robot file::
+
+    $ cd westeros/examples
+    $ vim westeros.robot
+
+Modify configuration for workflow::
+
+    $ cd westeros/etc
+    $ vim global.yaml
+    $ vim shared.yaml
+
+
+
 .. toctree::
    :maxdepth: 2
 
-   unittest
-   robotframework
-   selenium
-   sqlalchemy
-   requests
-   paramiko
-   yaml
 
 Indices and tables
 ==================
