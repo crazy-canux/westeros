@@ -54,10 +54,6 @@ Command line is the only user interface::
 
     $ westeros --help
 
-----
-TODO
-----
-
 ============
 Contribution
 ============

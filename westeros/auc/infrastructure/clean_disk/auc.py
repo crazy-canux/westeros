@@ -25,11 +25,10 @@ class CleanDiskAUC(BaseUnitTest):
         with BaseParamiko(
                 self._host, self._username, self._password,
         ) as ssh:
-            self._output, self._error = ssh.exec_command(
+            output, error, rc = ssh.exec_command(
                 cmd, get_pty=True, sudo_pw=self._sudo_pw
             )
-            logger.debug("output: {}".format(self._output))
-            logger.debug("error: {}".format(self._error))
+            # TODO: validate result
 
     def _validate_input(self):
         assert self._host is not None, "Host is required."
@@ -37,6 +36,3 @@ class CleanDiskAUC(BaseUnitTest):
         assert self._password is not None, "Password is required."
         assert self._sudo_pw is not None, 'sudo password is required.'
         assert self._path is not None, 'disk path is required.'
-
-    def _validate_output(self):
-        return self._output

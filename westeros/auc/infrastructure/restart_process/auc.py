@@ -25,11 +25,10 @@ class RestartProcessAUC(BaseUnitTest):
         with BaseParamiko(
                 self._host, self._username, self._password
         ) as ssh:
-            self._output, self._error = ssh.exec_command(
+            output, error, rc = ssh.exec_command(
                 cmd, get_pty=True, sudo_pw=self._sudo_pw
             )
-            logger.debug("output: {}".format(self._output))
-            logger.debug("error: {}".format(self._error))
+            # TODO: validate result.
         # TODO: validate process started.
         import time
         time.sleep(5)
@@ -40,8 +39,3 @@ class RestartProcessAUC(BaseUnitTest):
         assert self._password is not None, 'password is required.'
         assert self._sudo_pw is not None, 'sudo password is required.'
         assert self._process is not None, 'process is required.'
-
-    def _validate_output(self):
-        return self._output
-
-

@@ -14,6 +14,7 @@ Description:
     $ westeros --help
 """
 from super_devops.robotframework.rf_wrapper import BaseRF
+
 from westeros import __version__
 
 
