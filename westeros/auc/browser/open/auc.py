@@ -3,17 +3,20 @@ from super_devops.selenium.selenium_wrapper import BaseSelenium
 
 
 class OpenAUC(BaseUnitTest):
-    def __init__(self, keyword, browser_id, browser_type, url):
+    def __init__(self, keyword, browser_id, browser_type, headless_mode, url):
         super(OpenAUC, self).__init__(keyword, method_name='test_open_browser')
 
         self.browser_id = browser_id
         self.browser_type = browser_type
+        self.headless_mode = headless_mode
         self.url = url
 
         self.browser = None
 
     def test_open_browser(self):
-        self.browser = BaseSelenium(self.browser_id, self.browser_type)
+        self.browser = BaseSelenium(
+            self.browser_id, self.browser_type, self.headless_mode
+        )
         self.browser.launch(self.url)
         self.browser.maximize_window()
 

@@ -2,7 +2,9 @@
 # Global configuration for Test Automation Framework.
 ##############################################################################
 # Broswer type
-browser_type: firefox
+Browser:
+    browser_type: firefox
+    headless_mode: False
 
 ##############################################################################
 # SSH server

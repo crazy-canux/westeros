@@ -15,13 +15,17 @@ class BrowserWorkflow(BaseWorkflow):
             url=None
     ):
         try:
-            browser_type = browser_type or getattr(
-                self.ctx, 'browser_type', 'firefox'
-            )
+            if not browser_type:
+                browser_type = self.ctx.Browser["browser_type"]
+
+            headless_mode = self.ctx.Browser["headless_mode"]
+
             url = url or self.ctx.WesterosWeb['url'] or 'about:blank'
+
             browser_id = BrowserManager(
-                self.open_browser_on_westeros_ui.__name__, browser_id, browser_type
-            ).open(url)
+                self.open_browser_on_westeros_ui.__name__,
+                browser_id, browser_type
+            ).open(headless_mode, url)
         except Exception:
             raise
         else:
@@ -36,10 +40,11 @@ class BrowserWorkflow(BaseWorkflow):
             browser_type=None
     ):
         try:
-            browser_type = browser_type or getattr(
-                self.ctx, 'browser_type', 'firefox'
-            )
+            if not browser_type:
+                browser_type = self.ctx.Browser["browser_type"]
+
             browser_id = self.ctx.browser['id']
+
             BrowserManager(
                 self.close_browser.__name__, browser_id, browser_type
             ).close(

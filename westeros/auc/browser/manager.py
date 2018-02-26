@@ -18,9 +18,11 @@ class BrowserManager(object):
     def current_browser(self):
         return self._INSTANCES.get(self._browser_id)
 
-    def open(self, url):
+    def open(self, headless_mode, url):
         _id, _driver = OpenAUC(
-            self._keyword, self._browser_id, self._browser_type, url
+            self._keyword,
+            self._browser_id, self._browser_type,
+            headless_mode, url
         ).run()
         _browser_id, BrowserManager._INSTANCES[_browser_id] = _id, _driver
         return _browser_id
