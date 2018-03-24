@@ -15,10 +15,22 @@
 westeros
 ========
 
-Test automation based on robot framework and unittest.
-
 .. figure:: https://github.com/crazy-canux/westeros/blob/master/data/images/wes.jpg
    :alt: pic1
+
+[Deprecated] As test is part of DevOps.
+
+Please Move to another project `[super-devops] <https://github.com/crazy-canux/super-devops>`_
+
+Westeros is pure python code.
+
+Westeros based on robotframework and unittest.
+
+`[awesome-testing] <https://github.com/crazy-canux/awesome-testing>`_
+
+-----------
+Development
+-----------
 
 development::
 
