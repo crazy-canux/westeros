@@ -16,6 +16,7 @@ Description:
 import os
 
 from setuptools import setup, find_packages
+from setuptools.command.install import install
 
 import westeros
 
@@ -35,6 +36,16 @@ def read(readme):
     elif (extend == '.md'):
         import pypandoc
         return pypandoc.convert(readme, 'rst')
+
+
+class InstInstall(install):
+    def run(self):
+        print "PreInst for westeros."
+        # TODO
+        install.run(self)
+        print "PostInst for westeros."
+        # TODO
+
 
 INSTALL_REQUIRES = []
 
@@ -57,14 +68,20 @@ setup(
     include_package_data=True,
     scripts=['bin/westeros'],
     data_files=[
-        ('/etc/westeros', [
+        ('/etc/westeros/conf', [
             'etc/global.yaml',
             'etc/shared.yaml'
         ]),
         ('/etc/westeros/robot', [
             'examples/westeros.robot'
+        ]),
+        ('/etc/westeros/data', [
+            'data/westeros.data'
         ])
     ],
+    cmdclass={
+        "install": InstInstall
+    },
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Other Environment",
